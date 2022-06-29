@@ -93,7 +93,7 @@ body{
 .header-section{
     width: 100%;
     height: 100vh;
-    background-image: url(../IMG/header.png);
+    background-image: url(header.png);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -232,7 +232,7 @@ body{
 .image-collage{
     width: 100%;
     height: 100%;
-    background-image: url(../IMG/bg-1.png);
+    background-image: url(bg-1.png);
     background-size: cover;
     margin-left: 10px;
 }
