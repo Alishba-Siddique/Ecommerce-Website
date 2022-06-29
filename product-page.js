@@ -5,10 +5,10 @@ ratingStarsInput.map((star, index) => {
         for(let i = 0; i < 5; i++)
         {
             if(i <= index){
-                ratingStarsInput[i].src = '../IMG/fill star.png';
+                ratingStarsInput[i].src = 'fill star.png';
             }
             else{
-                ratingStarsInput[i].src = '../IMG/no fill star.png';
+                ratingStarsInput[i].src = 'no fill star.png';
             }
         }
     })
