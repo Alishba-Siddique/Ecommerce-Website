@@ -399,6 +399,148 @@ footer{
     text-transform: capitalize;
     font-size: 20px;
 }
+        /* product detail section */
+
+.product-section{
+    width: 100%;
+    margin-top: 120px;
+    padding: 0px 5vw;
+    display: flex;
+    gap: 40px;
+}
+
+.product-image{
+    width: 70%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.product-title{
+    font-size: 60px;
+}
+
+.product-descrip{
+    margin: 30px 0;
+    font-family: 'lato', sans-serif;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.rating{
+    display: flex; 
+}
+
+.rating .star{
+    width: 30px;
+    height: 30px;
+}
+
+.rating-count{
+    font-family: 'lato', sans-serif;
+    opacity: 0.4;
+    font-size: 14px;
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+.price{
+    font-size: 60px;
+    margin: 30px 0;
+}
+
+.product-btn{
+    padding: 15px 40px;
+    border: none;
+    color: #fff;
+    outline: none;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.buy-btn{
+    background-color: #d5be8b;
+}
+
+.cart-btn{
+    background-color: #190c05;
+}
+
+/*  detail descrip  section */
+
+.detail-descrip, .review-section, .add-review-section{
+    width: 100%;
+    padding: 100px 5vw 0;
+}
+
+.descrip{
+    font-family: 'lato', sans-serif;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.review-headline, .review-field{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #c9c9c9;
+    margin: 10px 0;
+    padding: 10px;
+    line-height: 40ox;
+    font-family: 'lato', sans-serif;
+    color: #000;
+    outline: none;
+    text-transform: capitalize;
+}
+
+::placeholder{
+    color: #c9c9c9;
+}
+
+.review-field{
+    height: 160px;
+    resize: none;
+    padding: 10px;
+}
+
+.review-headline:focus,
+.review-field:focus{
+    border-color: #d5be8b;
+}
+
+.review-headline:focus::placeholder,
+.review-field:focus::placeholder{
+    color: #d5be8b;
+}
+
+.rating-text{
+    font-family: 'lato', sans-serif;
+    color: #c9c9c9;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.rating-star{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px ;
+}
+
+.add-review-btn{
+    border: none;
+    outline: none;
+    background-color: #d5be8b;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+}
         
     </style>
 </head>
@@ -521,8 +663,24 @@ footer{
     <footer>
         made by Alishba Siddique
     </footer>
+    <!-- src="product-page.js" -->
+    <script>
+    let ratingStarsInput = [...document.querySelectorAll('.rating-star')];
 
-    <script src="product-page.js"></script>
+ratingStarsInput.map((star, index) => {
+    star.addEventListener('click', () => {
+        for(let i = 0; i < 5; i++)
+        {
+            if(i <= index){
+                ratingStarsInput[i].src = 'fill star.png';
+            }
+            else{
+                ratingStarsInput[i].src = 'no fill star.png';
+            }
+        }
+    })
+})
+    </script>
 
 </body>
 </html>
